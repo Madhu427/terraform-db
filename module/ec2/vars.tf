@@ -1,0 +1,13 @@
+variable "SSH_USERNAME" {}
+variable "SSH_PASSWORD" {}
+variable "DB_COMPONENT" {}
+variable "ENV" {}
+variable "AMI" {}
+variable "MONGODB_INSTANCE_TYPE" {}
+variable "SUBNET_ID" {}
+variable "DB_PORT" {}
+variable "PRIVATE_SUBNET_CIDR" {}
+variable "ALL_SUBNET_CIDR" {}
+variable "VPC_ID" {}
+variable "PRIVATE_HOSTED_ZONE_ID" {}
+variable "INSTANCE_TYPE" {}
