@@ -10,8 +10,7 @@ resource "aws_spot_instance_request" "db" {
 }
 
 resource "aws_ec2_tag" "spot-instances" {
-  count       = length(aws_spot_instance_request.db)
-  resource_id = aws_spot_instance_request.db.*.spot_instance_id
+  resource_id = aws_spot_instance_request.db.spot_instance_id
   key         = "Name"
   value       = "${var.DB_COMPONENT}-${var.ENV}"
 }
