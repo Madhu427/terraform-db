@@ -3,7 +3,6 @@ variable "SSH_PASSWORD" {}
 variable "DB_COMPONENT" {}
 variable "ENV" {}
 variable "AMI" {}
-variable "MONGODB_INSTANCE_TYPE" {}
 variable "SUBNET_ID" {}
 variable "DB_PORT" {}
 variable "PRIVATE_SUBNET_CIDR" {}
