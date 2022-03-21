@@ -8,7 +8,7 @@ resource "aws_db_instance" "default" {
   username             = jsondecode(data.aws_secretsmanager_secret_version.dev-secrets.secret_string)["RDS_MYSQL_USER"]
   password             = jsondecode(data.aws_secretsmanager_secret_version.dev-secrets.secret_string)["RDS_MYSQL_PASS"]
   skip_final_snapshot  = true
-  db_subnet_group_name = "aws_db_subnet_group.default.name"
+  db_subnet_group_name = aws_db_subnet_group.default.name
   vpc_security_group_ids = [aws_security_group.mysql.id]
 
 }
