@@ -20,3 +20,10 @@ data "aws_secretsmanager_secret" "common2" {
 data "aws_secretsmanager_secret_version" "secrets" {
   secret_id = data.aws_secretsmanager_secret.common2.id
 }
+data "aws_secretsmanager_secret" "dev" {
+  name = "dev-env"
+}
+
+data "aws_secretsmanager_secret_version" "dev-secrets" {
+  secret_id = data.aws_secretsmanager_secret.dev.id
+}
