@@ -52,5 +52,5 @@ resource "aws_route53_record" "redis" {
   name    = "redis-${var.ENV}.roboshop.internal"
   type    = "CNAME"
   ttl     = "300"
-  records = [aws_elasticache_cluster.redis.cache_nodes.[0].address]
+  records = [aws_elasticache_cluster.redis.cache_nodes[0].address]
 }
