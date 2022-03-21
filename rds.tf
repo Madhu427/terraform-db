@@ -4,7 +4,7 @@ resource "aws_db_instance" "default" {
   engine               = "mysql"
   engine_version       = "5.7"
   instance_class       = "db.t3.micro"
-  name                 = "sample"
+  name                 = "db_sample"
   username             = jsondecode(data.aws_secretsmanager_secret_version.dev-secrets.secret_string)["RDS_MYSQL_USER"]
   password             = jsondecode(data.aws_secretsmanager_secret_version.dev-secrets.secret_string)["RDS_MYSQL_PASS"]
   skip_final_snapshot  = true
