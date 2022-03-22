@@ -10,7 +10,7 @@ module "mongodb" {
   VPC_ID          = data.terraform_remote_state.vpc.outputs.VPC_ID
   PRIVATE_HOSTED_ZONE_ID = data.terraform_remote_state.vpc.outputs.PRIVATE_HOSTED_ZONE_ID
   DB_COMPONENT = "mongodb"
-  DB_PORT = 27107
+  DB_PORT = 27017
   INSTANCE_TYPE = var.MONGODB_INSTANCE_TYPE
 }
 
