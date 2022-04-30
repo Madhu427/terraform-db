@@ -12,7 +12,7 @@ resource "null_resource" "db-deploy" {
     }
 
     inline = [
-      "ansible-pull -i  localhost, -U https://github.com/Madhu427/ansible.git roboshop.yml -e COMPONENT=${var.DB_COMPONENT} -e ENV=${var.ENV}"
+      "ansible-pull -U https://github.com/Madhu427/ansible.git roboshop-pull.yml -e COMPONENT=${var.DB_COMPONENT} -e ENV=${var.ENV}"
     ]
   }
 }
