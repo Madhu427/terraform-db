@@ -14,6 +14,8 @@ resource "null_resource" "db-deploy" {
     inline = [
       "ansible-pull -U https://github.com/Madhu427/ansible.git roboshop-pull.yml -e COMPONENT=${var.DB_COMPONENT} -e ENV=${var.ENV}"
     ]
+
+    on_failure = “continue”
   }
 }
 

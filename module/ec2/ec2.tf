@@ -7,6 +7,8 @@ resource "aws_spot_instance_request" "db" {
   subnet_id = var.SUBNET_ID
   wait_for_fulfillment = true
   vpc_security_group_ids = [aws_security_group.db_sg.id]
+
+
 }
 
 resource "aws_ec2_tag" "spot-instances" {
